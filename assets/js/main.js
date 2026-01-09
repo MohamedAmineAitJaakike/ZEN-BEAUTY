@@ -645,8 +645,8 @@
     return;
   }
 
-  // 1) CONFIG EMAILJS (IMPORTANT: tout en STRING)
-  const EMAILJS_PUBLIC_KEY = "i71kBnzen70lnKZNu";   // <-- entre guillemets
+  // 1) CONFIG EMAILJS
+  const EMAILJS_PUBLIC_KEY = "i71kBnzen70lnKZNu";
   const EMAILJS_SERVICE_ID = "service_gokzoho";
 
   const TEMPLATE_OWNER_ID  = "template_5ns868r";
@@ -663,12 +663,13 @@
   if (!form) return;
 
   // Si tu n’as pas d’id="submit-btn", on prend le bouton submit du form
-  const submitBtn = document.getElementById("submit-btn") || form.querySelector('button[type="submit"]');
+  const submitBtn =
+    document.getElementById("submit-btn") || form.querySelector('button[type="submit"]');
 
   const safe = (v) => (v ?? "").toString().trim();
   const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  // remove() fallback (au cas où)
+  // remove() fallback
   const safeRemove = (el) => {
     if (!el) return;
     if (typeof el.remove === "function") el.remove();
@@ -768,16 +769,11 @@
 
     lockButton(true);
 
-    // Variables envoyées au template EmailJS
-    const params = {
-      // pour le propriétaire
-      to_email: OWNER_EMAIL,
+    // ✅ Paramètres communs
+    const baseParams = {
+      spa_name: "Zen & Beauté SPA",
+      spa_city: "Tétouan",
 
-      // pour le client
-      client_name: data.name,
-      client_email: data.email,
-
-      // infos
       name: data.name,
       phone: data.phone,
       email: data.email,
@@ -786,17 +782,31 @@
       time: data.time || "-",
       message: data.message,
 
-      // lien whatsapp
+      client_name: data.name,
+      client_email: data.email,
+
       whatsapp_link: waUrl,
       owner_whatsapp: `+${OWNER_WHATSAPP_NUMBER}`,
     };
 
+    // ✅ 1) Paramètres OWNER
+    const ownerParams = {
+      ...baseParams,
+      to_email: OWNER_EMAIL, // owner reçoit ici
+    };
+
+    // ✅ 2) Paramètres CLIENT
+    const clientParams = {
+      ...baseParams,
+      to_email: data.email, // client reçoit ici
+    };
+
     try {
       // 1) Email propriétaire
-      await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_OWNER_ID, params);
+      await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_OWNER_ID, ownerParams);
 
       // 2) Email client
-      await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_CLIENT_ID, params);
+      await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_CLIENT_ID, clientParams);
 
       form.reset();
 
