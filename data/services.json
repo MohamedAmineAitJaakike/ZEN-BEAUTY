@@ -1,0 +1,165 @@
+{
+  "categories": [
+    {
+      "id": "hammam",
+      "name": "Hammam Traditionnel",
+      "nameAr": "الحمام التقليدي",
+      "icon": "droplets",
+      "image": "assets/images/services/hammam.jpg",
+      "description": "Vivez l'expérience authentique du hammam marocain. Un rituel de purification ancestral pour le corps et l'esprit.",
+      "services": [
+        {
+          "id": "h1",
+          "name": "Hammam Classique",
+          "description": "Hammam traditionnel avec gommage au savon noir et ghassoul. Inclut une exfoliation complète du corps.",
+          "duration": "45 min",
+          "price": 200,
+          "image": "assets/images/services/hammam-classique.jpg",
+          "includes": ["Savon noir", "Gommage", "Ghassoul"]
+        },
+        {
+          "id": "h2",
+          "name": "Hammam Royal",
+          "description": "L'expérience hammam ultime. Gommage luxueux, enveloppement au ghassoul, et massage relaxant.",
+          "duration": "90 min",
+          "price": 450,
+          "image": "assets/images/services/hammam-royal.jpg",
+          "popular": true,
+          "includes": ["Savon noir beldi", "Gommage kessa", "Ghassoul", "Massage 20min", "Thé offert"]
+        },
+        {
+          "id": "h3",
+          "name": "Hammam VIP Privatif",
+          "description": "Espace hammam privé pour vous seule ou en duo. Intimité et luxe garantis.",
+          "duration": "120 min",
+          "price": 700,
+          "image": "assets/images/services/hammam-vip.jpg",
+          "includes": ["Espace privatif", "Produits premium", "Massage complet", "Boissons", "Fruits"]
+        }
+      ]
+    },
+    {
+      "id": "massage",
+      "name": "Massages",
+      "nameAr": "المساج",
+      "icon": "hand",
+      "image": "assets/images/services/massage.jpg",
+      "description": "Des massages experts pour une détente absolue. Nos thérapeutes qualifiées vous transportent vers un état de relaxation profonde.",
+      "services": [
+        {
+          "id": "m1",
+          "name": "Massage Relaxant",
+          "description": "Massage doux aux huiles essentielles pour une relaxation profonde du corps et de l'esprit.",
+          "duration": "60 min",
+          "price": 350,
+          "image": "assets/images/services/massage-relaxant.jpg",
+          "includes": ["Huiles essentielles", "Musique apaisante", "Thé offert"]
+        },
+        {
+          "id": "m2",
+          "name": "Massage à l'Huile d'Argan",
+          "description": "Massage nourrissant à l'huile d'argan pure du Maroc. Hydrate et régénère la peau.",
+          "duration": "60 min",
+          "price": 400,
+          "image": "assets/images/services/massage-argan.jpg",
+          "popular": true,
+          "includes": ["Huile d'argan pure", "Soin hydratant", "Thé offert"]
+        },
+        {
+          "id": "m3",
+          "name": "Massage aux Pierres Chaudes",
+          "description": "Massage thérapeutique avec pierres volcaniques chaudes. Soulage les tensions musculaires.",
+          "duration": "75 min",
+          "price": 500,
+          "image": "assets/images/services/massage-pierres.jpg",
+          "includes": ["Pierres volcaniques", "Huiles chaudes", "Relaxation profonde"]
+        },
+        {
+          "id": "m4",
+          "name": "Massage en Duo",
+          "description": "Partagez un moment de détente à deux. Idéal pour couples ou amies.",
+          "duration": "60 min",
+          "price": 650,
+          "image": "assets/images/services/massage-duo.jpg",
+          "priceNote": "pour 2 personnes",
+          "includes": ["Cabine double", "2 thérapeutes", "Ambiance romantique"]
+        }
+      ]
+    },
+    {
+      "id": "visage",
+      "name": "Soins du Visage",
+      "nameAr": "العناية بالوجه",
+      "icon": "sparkles",
+      "image": "assets/images/services/visage.jpg",
+      "description": "Des soins sur-mesure pour révéler l'éclat naturel de votre peau.",
+      "services": [
+        {
+          "id": "v1",
+          "name": "Soin Hydratant",
+          "description": "Soin profond pour hydrater et nourrir les peaux sèches et déshydratées.",
+          "duration": "45 min",
+          "price": 280,
+          "image": "assets/images/services/soin-hydratant.jpg",
+          "includes": ["Nettoyage", "Masque hydratant", "Sérum", "Massage visage"]
+        },
+        {
+          "id": "v2",
+          "name": "Soin Éclat",
+          "description": "Retrouvez une peau lumineuse et éclatante. Idéal avant un événement.",
+          "duration": "60 min",
+          "price": 350,
+          "image": "assets/images/services/soin-eclat.jpg",
+          "popular": true,
+          "includes": ["Peeling doux", "Masque éclat", "Vitamine C", "Massage liftant"]
+        },
+        {
+          "id": "v3",
+          "name": "Soin Anti-Âge",
+          "description": "Soin premium anti-rides pour raffermir et rajeunir la peau.",
+          "duration": "75 min",
+          "price": 450,
+          "image": "assets/images/services/soin-antiage.jpg",
+          "includes": ["Soin complet", "Collagène", "Acide hyaluronique", "Massage liftant"]
+        }
+      ]
+    },
+    {
+      "id": "corps",
+      "name": "Soins du Corps",
+      "nameAr": "العناية بالجسم",
+      "icon": "flower",
+      "image": "assets/images/services/corps.jpg",
+      "description": "Prenez soin de votre corps avec nos rituels de beauté complets.",
+      "services": [
+        {
+          "id": "c1",
+          "name": "Gommage Corps",
+          "description": "Exfoliation complète pour une peau douce et soyeuse.",
+          "duration": "30 min",
+          "price": 180,
+          "image": "assets/images/services/gommage.jpg",
+          "includes": ["Gommage complet", "Hydratation", "Peau soyeuse"]
+        },
+        {
+          "id": "c2",
+          "name": "Enveloppement Ghassoul",
+          "description": "Enveloppement purifiant à l'argile marocaine. Détoxifie et reminéralise.",
+          "duration": "45 min",
+          "price": 250,
+          "image": "assets/images/services/enveloppement.jpg",
+          "includes": ["Ghassoul pur", "Détoxification", "Minéraux naturels"]
+        },
+        {
+          "id": "c3",
+          "name": "Soin Minceur",
+          "description": "Protocole amincissant avec enveloppement et massage drainant.",
+          "duration": "60 min",
+          "price": 400,
+          "image": "assets/images/services/minceur.jpg",
+          "includes": ["Enveloppement actif", "Massage drainant", "Zones ciblées"]
+        }
+      ]
+    }
+  ]
+}

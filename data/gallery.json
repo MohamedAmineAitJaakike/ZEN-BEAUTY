@@ -1,0 +1,92 @@
+{
+  "categories": [
+    { "id": "all", "name": "Tout" },
+    { "id": "spa", "name": "Espace SPA" },
+    { "id": "hammam", "name": "Hammam" },
+    { "id": "massage", "name": "Massage" },
+    { "id": "soins", "name": "Soins" },
+    { "id": "ambiance", "name": "Ambiance" }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "src": "assets/images/gallery/spa-1.jpg",
+      "thumb": "assets/images/gallery/thumbs/spa-1.jpg",
+      "alt": "Espace accueil SPA",
+      "category": "spa",
+      "title": "Notre Accueil"
+    },
+    {
+      "id": 2,
+      "src": "assets/images/gallery/spa-2.jpg",
+      "thumb": "assets/images/gallery/thumbs/spa-2.jpg",
+      "alt": "Espace détente",
+      "category": "spa",
+      "title": "Espace Détente"
+    },
+    {
+      "id": 3,
+      "src": "assets/images/gallery/hammam-1.jpg",
+      "thumb": "assets/images/gallery/thumbs/hammam-1.jpg",
+      "alt": "Hammam traditionnel",
+      "category": "hammam",
+      "title": "Hammam Traditionnel"
+    },
+    {
+      "id": 4,
+      "src": "assets/images/gallery/hammam-2.jpg",
+      "thumb": "assets/images/gallery/thumbs/hammam-2.jpg",
+      "alt": "Salle hammam VIP",
+      "category": "hammam",
+      "title": "Hammam VIP"
+    },
+    {
+      "id": 5,
+      "src": "assets/images/gallery/massage-1.jpg",
+      "thumb": "assets/images/gallery/thumbs/massage-1.jpg",
+      "alt": "Cabine de massage",
+      "category": "massage",
+      "title": "Cabine Massage"
+    },
+    {
+      "id": 6,
+      "src": "assets/images/gallery/massage-2.jpg",
+      "thumb": "assets/images/gallery/thumbs/massage-2.jpg",
+      "alt": "Massage aux pierres chaudes",
+      "category": "massage",
+      "title": "Pierres Chaudes"
+    },
+    {
+      "id": 7,
+      "src": "assets/images/gallery/soins-1.jpg",
+      "thumb": "assets/images/gallery/thumbs/soins-1.jpg",
+      "alt": "Soin visage",
+      "category": "soins",
+      "title": "Soin Visage"
+    },
+    {
+      "id": 8,
+      "src": "assets/images/gallery/ambiance-1.jpg",
+      "thumb": "assets/images/gallery/thumbs/ambiance-1.jpg",
+      "alt": "Décoration orientale",
+      "category": "ambiance",
+      "title": "Ambiance Orientale"
+    },
+    {
+      "id": 9,
+      "src": "assets/images/gallery/ambiance-2.jpg",
+      "thumb": "assets/images/gallery/thumbs/ambiance-2.jpg",
+      "alt": "Bougies et détente",
+      "category": "ambiance",
+      "title": "Lumière Tamisée"
+    },
+    {
+      "id": 10,
+      "src": "assets/images/gallery/products-1.jpg",
+      "thumb": "assets/images/gallery/thumbs/products-1.jpg",
+      "alt": "Produits naturels",
+      "category": "soins",
+      "title": "Nos Produits"
+    }
+  ]
+}

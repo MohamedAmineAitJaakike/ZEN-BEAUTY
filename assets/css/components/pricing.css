@@ -1,0 +1,271 @@
+/* ============================================
+   PRICING SECTION - SPA TÉTOUAN
+   ============================================ */
+
+.pricing {
+  background-color: var(--bg-section);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Decoration */
+.pricing::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  position: relative;
+  z-index: 1;
+}
+
+/* Pricing Card */
+.pricing-card {
+  position: relative;
+  background: var(--bg-section);
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.pricing-card:hover {
+  transform: translateY(-15px);
+  box-shadow: var(--shadow-2xl);
+}
+
+/* Popular Card */
+.pricing-card.popular {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #2d2d2d 100%);
+  color: var(--text-light);
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.pricing-card.popular:hover {
+  transform: scale(1.05) translateY(-15px);
+}
+
+.pricing-card.popular .pricing-card-title,
+.pricing-card.popular .pricing-card-subtitle,
+.pricing-card.popular .pricing-card-price,
+.pricing-card.popular .pricing-card-duration,
+.pricing-card.popular .pricing-card-description,
+.pricing-card.popular .pricing-feature {
+  color: var(--text-light);
+}
+
+.pricing-card.popular .pricing-feature-icon {
+  color: var(--color-primary);
+}
+
+/* Popular Badge */
+.pricing-badge {
+  position: absolute;
+  top: var(--space-lg);
+  right: calc(var(--space-lg) * -1);
+  padding: var(--space-xs) var(--space-2xl);
+  background: var(--color-primary);
+  color: var(--color-accent);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+/* Card Icon */
+.pricing-card-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+  font-size: var(--fs-2xl);
+  color: var(--color-accent);
+}
+
+/* Card Header */
+.pricing-card-subtitle {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.pricing-card-title {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-sm);
+}
+
+.pricing-card-description {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+/* Pricing */
+.pricing-card-pricing {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.pricing-card.popular .pricing-card-pricing {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pricing-card-price {
+  font-family: var(--font-heading);
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.pricing-card-price span {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-regular);
+}
+
+.pricing-card-original {
+  font-size: var(--fs-base);
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-left: var(--space-sm);
+}
+
+.pricing-card-duration {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-xs);
+}
+
+.pricing-card-discount {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  background: rgba(40, 167, 69, 0.1);
+  color: var(--color-success);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  border-radius: var(--border-radius-sm);
+  margin-left: var(--space-sm);
+}
+
+/* Features List */
+.pricing-features {
+  margin-bottom: var(--space-xl);
+}
+
+.pricing-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+.pricing-feature-icon {
+  color: var(--color-primary);
+  font-size: var(--fs-md);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Card Button */
+.pricing-card .btn {
+  width: 100%;
+}
+
+/* Pricing Table Alternative */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-section);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: var(--space-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.pricing-table th {
+  background: var(--color-accent);
+  color: var(--text-light);
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+}
+
+.pricing-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pricing-table tr:hover td {
+  background: var(--color-beige);
+}
+
+/* Gift Card Section */
+.pricing-gift {
+  margin-top: var(--space-4xl);
+  padding: var(--space-3xl);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  border-radius: var(--border-radius-xl);
+  text-align: center;
+  color: var(--text-light);
+}
+
+.pricing-gift h3 {
+  color: var(--text-light);
+  margin-bottom: var(--space-md);
+}
+
+.pricing-gift p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-xl);
+}
+
+.pricing-gift-values {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.pricing-gift-value {
+  padding: var(--space-md) var(--space-xl);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-md);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.pricing-gift-value:hover,
+.pricing-gift-value.selected {
+  background: var(--text-light);
+  color: var(--color-primary);
+}

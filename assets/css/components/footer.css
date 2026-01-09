@@ -1,0 +1,290 @@
+/* ============================================
+   FOOTER - SPA TÉTOUAN
+   ============================================ */
+
+.footer {
+  background: var(--color-accent);
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Footer Wave */
+.footer-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: translateY(-99%);
+}
+
+.footer-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+.footer-wave .shape-fill {
+  fill: var(--color-accent);
+}
+
+/* Footer Main */
+.footer-main {
+  padding: var(--space-4xl) 0 var(--space-2xl);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: var(--space-3xl);
+}
+
+/* Footer Brand */
+.footer-brand {
+  padding-right: var(--space-2xl);
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+.footer-logo-text {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  color: var(--text-light);
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--space-lg);
+  line-height: var(--lh-relaxed);
+}
+
+/* Footer Social */
+.footer-social {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footer-social-link {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: var(--fs-lg);
+  transition: all var(--transition-base);
+}
+
+.footer-social-link:hover {
+  background: var(--color-primary);
+  color: var(--color-accent);
+  transform: translateY(-5px);
+}
+
+/* Footer Column */
+.footer-column h4 {
+  font-size: var(--fs-lg);
+  color: var(--text-light);
+  margin-bottom: var(--space-xl);
+  position: relative;
+  padding-bottom: var(--space-md);
+}
+
+.footer-column h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--fs-base);
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.footer-links a::before {
+  content: '→';
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all var(--transition-base);
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+  padding-left: var(--space-sm);
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Footer Contact Info */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footer-contact-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.footer-contact-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+}
+
+.footer-contact-text a {
+  color: var(--text-light);
+}
+
+.footer-contact-text a:hover {
+  color: var(--color-primary);
+}
+
+/* Footer Newsletter */
+.footer-newsletter {
+  margin-top: var(--space-xl);
+}
+
+.footer-newsletter p {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--space-md);
+}
+
+.footer-newsletter-form {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.footer-newsletter-input {
+  flex: 1;
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: var(--border-radius-md);
+  color: var(--text-light);
+}
+
+.footer-newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-newsletter-btn {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-primary);
+  color: var(--color-accent);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.footer-newsletter-btn:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding: var(--space-xl) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--fs-sm);
+}
+
+.footer-copyright a {
+  color: var(--color-primary);
+}
+
+.footer-legal {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--fs-sm);
+  transition: color var(--transition-base);
+}
+
+.footer-legal a:hover {
+  color: var(--color-primary);
+}
+
+/* Payment Methods */
+.footer-payments {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.footer-payments span {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-payments img {
+  height: 30px;
+  opacity: 0.7;
+  transition: opacity var(--transition-base);
+}
+
+.footer-payments img:hover {
+  opacity: 1;
+}

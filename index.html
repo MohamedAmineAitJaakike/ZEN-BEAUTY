@@ -1,0 +1,1331 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO -->
+  <title>Zen & Beauté SPA | Luxury Wellness Tétouan</title>
+  <meta name="description" content="Le SPA le plus luxueux de Tétouan. Hammam traditionnel, massages premium, soins exclusifs.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Libraries -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== CURSEUR ==================== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ==================== PRELOADER ==================== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__content">
+      <div class="preloader__logo">Z<span>&</span>B</div>
+      <div class="preloader__bar">
+        <div class="preloader__progress"></div>
+      </div>
+      <p class="preloader__text">Chargement...</p>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <div class="nav__container">
+        
+        <!-- Logo -->
+        <a href="#home" class="nav__logo">
+          <div class="nav__logo-icon">Z&B</div>
+          <div class="nav__logo-text">
+            <span class="nav__logo-name">Zen & Beauté</span>
+            <span class="nav__logo-tagline">Luxury SPA</span>
+          </div>
+        </a>
+
+        <!-- Menu Desktop -->
+        <ul class="nav__menu" id="nav-menu">
+          <li><a href="#home" class="nav__link active">Accueil</a></li>
+          <li><a href="#about" class="nav__link">À Propos</a></li>
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="#gallery" class="nav__link">Galerie</a></li>
+          <li><a href="#pricing" class="nav__link">Tarifs</a></li>
+          <li><a href="#testimonials" class="nav__link">Avis</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="nav__cta">
+          <a href="tel:+212539123456" class="nav__phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>+212 539 123 456</span>
+          </a>
+          <a href="#contact" class="btn btn--primary">Réserver</a>
+        </div>
+
+        <!-- Toggle Mobile -->
+        <button class="nav__toggle" id="nav-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" id="nav-mobile">
+      <ul class="nav__mobile-menu">
+        <li><a href="#home" class="nav__mobile-link">Accueil</a></li>
+        <li><a href="#about" class="nav__mobile-link">À Propos</a></li>
+        <li><a href="#services" class="nav__mobile-link">Services</a></li>
+        <li><a href="#gallery" class="nav__mobile-link">Galerie</a></li>
+        <li><a href="#pricing" class="nav__mobile-link">Tarifs</a></li>
+        <li><a href="#testimonials" class="nav__mobile-link">Avis</a></li>
+        <li><a href="#contact" class="nav__mobile-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn--primary btn--lg">Réserver</a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="home" class="hero">
+    
+    <!-- Video Background -->
+    <div class="hero__bg">
+      <video class="hero__video" id="hero-video" autoplay muted loop playsinline>
+        <source src="assets/videos/spa-video.mp4" type="video/mp4">
+      </video>
+      <div class="hero__bg-fallback"></div>
+    </div>
+    
+    <!-- Overlay -->
+    <div class="hero__overlay"></div>
+    
+    <!-- Particles -->
+    <div class="hero__particles">
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+    </div>
+
+    <!-- Content -->
+    <div class="hero__content">
+      <div class="hero__badge" data-aos="fade-down">
+        <span>✨</span>
+        <span>Bienvenue au Paradis du Bien-être</span>
+      </div>
+
+      <h1 class="hero__title" data-aos="fade-up" data-aos-delay="200">
+        Zen <span class="gold">&</span> Beauté
+        <span class="hero__subtitle">Luxury SPA Experience</span>
+      </h1>
+
+      <p class="hero__text" data-aos="fade-up" data-aos-delay="400">
+        Évadez-vous dans un monde de sérénité au cœur de Tétouan. 
+        Découvrez nos rituels ancestraux marocains et nos soins exclusifs.
+      </p>
+
+      <div class="hero__buttons" data-aos="fade-up" data-aos-delay="600">
+        <a href="#services" class="btn btn--primary btn--lg">
+          <span>Découvrir nos Soins</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn--outline btn--lg">
+          <span>Réserver Maintenant</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero__stats" data-aos="fade-up" data-aos-delay="800">
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="500">0</span>
+          <span class="hero__stat-text">Clientes Satisfaites</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="15">0</span>
+          <span class="hero__stat-text">Soins Exclusifs</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="5">0</span>
+          <span class="hero__stat-text">Années d'Excellence</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="98">0</span>
+          <span class="hero__stat-suffix">%</span>
+          <span class="hero__stat-text">Satisfaction</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll -->
+    <a href="#about" class="hero__scroll">
+      <span class="hero__scroll-mouse">
+        <span class="hero__scroll-wheel"></span>
+      </span>
+      <span class="hero__scroll-text">Défiler</span>
+    </a>
+
+    <!-- Social -->
+    <div class="hero__social">
+      <a href="https://facebook.com" target="_blank" class="hero__social-link" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="hero__social-link" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+      <a href="https://tiktok.com" target="_blank" class="hero__social-link" aria-label="TikTok">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+        </svg>
+      </a>
+      <a href="https://wa.me/212661123456" target="_blank" class="hero__social-link" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ==================== MARQUEE ==================== -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <div class="marquee__content">
+        <span>✦ Hammam Traditionnel</span>
+        <span>✦ Massage Relaxant</span>
+        <span>✦ Soin Visage</span>
+        <span>✦ Gommage Corps</span>
+        <span>✦ Rituel Mariée</span>
+        <span>✦ Huile d'Argan</span>
+        <span>✦ Bien-être</span>
+        <span>✦ Luxe</span>
+        <span>✦ Hammam Traditionnel</span>
+        <span>✦ Massage Relaxant</span>
+        <span>✦ Soin Visage</span>
+        <span>✦ Gommage Corps</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about__grid">
+        
+        <!-- Images -->
+        <div class="about__images" data-aos="fade-right">
+          <div class="about__img-main">
+            <img src="assets/images/about/about-1.jpg" alt="Notre SPA">
+            <div class="about__img-border"></div>
+          </div>
+          <div class="about__img-secondary">
+            <img src="assets/images/about/about-2.jpg" alt="Ambiance Zen">
+          </div>
+          <div class="about__badge">
+            <span class="about__badge-number">5+</span>
+            <span class="about__badge-text">Années d'Excellence</span>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="about__content" data-aos="fade-left">
+          <span class="section__label">
+            <span class="section__label-line"></span>
+            À Propos de Nous
+          </span>
+          
+          <h2 class="section__title">
+            L'Art du Bien-être <span class="gold">Réinventé</span>
+          </h2>
+          
+          <p class="about__text">
+            Depuis 2020, <strong>Zen & Beauté SPA</strong> vous invite à une escapade 
+            sensorielle au cœur de Tétouan. Notre sanctuaire dédié au bien-être allie 
+            l'authenticité des rituels marocains ancestraux à l'excellence des techniques 
+            modernes.
+          </p>
+          
+          <p class="about__text">
+            Chaque soin est une expérience unique, orchestrée par nos thérapeutes 
+            expertes utilisant exclusivement des produits naturels et biologiques.
+          </p>
+
+          <div class="about__features">
+            <div class="about__feature">
+              <div class="about__feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+                  <path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/>
+                  <path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/>
+                </svg>
+              </div>
+              <div class="about__feature-text">
+                <h4>100% Naturel</h4>
+                <p>Produits bio du Maroc</p>
+              </div>
+            </div>
+            <div class="about__feature">
+              <div class="about__feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"/>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                </svg>
+              </div>
+              <div class="about__feature-text">
+                <h4>Expertes Certifiées</h4>
+                <p>Équipe professionnelle</p>
+              </div>
+            </div>
+            <div class="about__feature">
+              <div class="about__feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="about__feature-text">
+                <h4>Hygiène Parfaite</h4>
+                <p>Protocoles stricts</p>
+              </div>
+            </div>
+            <div class="about__feature">
+              <div class="about__feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+              </div>
+              <div class="about__feature-text">
+                <h4>Satisfaction 100%</h4>
+                <p>98% recommandation</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#services" class="btn btn--primary">
+            <span>Découvrir nos Services</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES ==================== -->
+  <section id="services" class="services section section--dark">
+    <div class="container">
+      
+      <!-- Header -->
+      <div class="section__header" data-aos="fade-up">
+        <span class="section__label section__label--light">
+          <span class="section__label-line"></span>
+          Nos Prestations
+        </span>
+        <h2 class="section__title section__title--light">
+          Découvrez Nos <span class="gold">Services</span>
+        </h2>
+        <p class="section__desc section__desc--light">
+          Une gamme complète de soins luxueux pour votre bien-être
+        </p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="services__tabs" data-aos="fade-up">
+        <button class="services__tab active" data-filter="all">Tous</button>
+        <button class="services__tab" data-filter="hammam">Hammam</button>
+        <button class="services__tab" data-filter="massage">Massages</button>
+        <button class="services__tab" data-filter="visage">Visage</button>
+        <button class="services__tab" data-filter="corps">Corps</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="services__grid">
+        
+        <!-- Service 1 -->
+        <article class="service-card" data-aos="fade-up" data-category="hammam">
+          <div class="service-card__img">
+            <img src="assets/images/services/hammam-classique.jpg" alt="Hammam Classique">
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__tag">Hammam</span>
+            <h3 class="service-card__title">Hammam Classique</h3>
+            <p class="service-card__desc">Rituel purificateur au savon noir beldi et gommage kessa.</p>
+            <div class="service-card__footer">
+              <div class="service-card__price">
+                <span class="price">200</span>
+                <span class="currency">MAD</span>
+              </div>
+              <div class="service-card__time">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>45 min</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-card__link" aria-label="Réserver">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Service 2 - Popular -->
+        <article class="service-card service-card--popular" data-aos="fade-up" data-aos-delay="100" data-category="hammam">
+          <span class="service-card__badge">Populaire</span>
+          <div class="service-card__img">
+            <img src="assets/images/services/hammam-royal.jpg" alt="Hammam Royal">
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__tag">Hammam</span>
+            <h3 class="service-card__title">Hammam Royal</h3>
+            <p class="service-card__desc">L'expérience ultime : gommage, ghassoul et massage relaxant.</p>
+            <div class="service-card__footer">
+              <div class="service-card__price">
+                <span class="price">450</span>
+                <span class="currency">MAD</span>
+              </div>
+              <div class="service-card__time">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>90 min</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-card__link" aria-label="Réserver">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Service 3 -->
+        <article class="service-card" data-aos="fade-up" data-aos-delay="200" data-category="massage">
+          <div class="service-card__img">
+            <img src="assets/images/services/massage-relaxant.jpg" alt="Massage Relaxant">
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__tag">Massage</span>
+            <h3 class="service-card__title">Massage Relaxant</h3>
+            <p class="service-card__desc">Massage doux aux huiles essentielles pour une détente profonde.</p>
+            <div class="service-card__footer">
+              <div class="service-card__price">
+                <span class="price">350</span>
+                <span class="currency">MAD</span>
+              </div>
+              <div class="service-card__time">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>60 min</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-card__link" aria-label="Réserver">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Service 4 -->
+        <article class="service-card service-card--popular" data-aos="fade-up" data-category="massage">
+          <span class="service-card__badge">Best-Seller</span>
+          <div class="service-card__img">
+            <img src="assets/images/services/massage-argan.jpg" alt="Massage Huile d'Argan">
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__tag">Massage</span>
+            <h3 class="service-card__title">Massage Huile d'Argan</h3>
+            <p class="service-card__desc">Massage nourrissant à l'huile d'argan pure du Maroc.</p>
+            <div class="service-card__footer">
+              <div class="service-card__price">
+                <span class="price">400</span>
+                <span class="currency">MAD</span>
+              </div>
+              <div class="service-card__time">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>60 min</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-card__link" aria-label="Réserver">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Service 5 -->
+        <article class="service-card" data-aos="fade-up" data-aos-delay="100" data-category="visage">
+          <div class="service-card__img">
+            <img src="assets/images/services/soin-visage.jpg" alt="Soin Visage Éclat">
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__tag">Visage</span>
+            <h3 class="service-card__title">Soin Visage Éclat</h3>
+            <p class="service-card__desc">Retrouvez une peau lumineuse avec notre soin signature.</p>
+            <div class="service-card__footer">
+              <div class="service-card__price">
+                <span class="price">350</span>
+                <span class="currency">MAD</span>
+              </div>
+              <div class="service-card__time">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>60 min</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-card__link" aria-label="Réserver">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Service 6 -->
+        <article class="service-card" data-aos="fade-up" data-aos-delay="200" data-category="corps">
+          <div class="service-card__img">
+            <img src="assets/images/services/gommage-corps.jpg" alt="Gommage Corps">
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__tag">Corps</span>
+            <h3 class="service-card__title">Gommage Corps Complet</h3>
+            <p class="service-card__desc">Exfoliation douce pour une peau soyeuse et régénérée.</p>
+            <div class="service-card__footer">
+              <div class="service-card__price">
+                <span class="price">250</span>
+                <span class="currency">MAD</span>
+              </div>
+              <div class="service-card__time">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>45 min</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-card__link" aria-label="Réserver">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
+
+      </div>
+
+      <div class="services__cta" data-aos="fade-up">
+        <a href="#pricing" class="btn btn--outline btn--light btn--lg">
+          <span>Voir Tous les Tarifs</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section id="gallery" class="gallery section">
+    <div class="container">
+      
+      <div class="section__header" data-aos="fade-up">
+        <span class="section__label">
+          <span class="section__label-line"></span>
+          Notre Univers
+        </span>
+        <h2 class="section__title">Galerie <span class="gold">Photos</span></h2>
+        <p class="section__desc">Plongez dans l'atmosphère unique de notre SPA</p>
+      </div>
+
+      <div class="gallery__filter" data-aos="fade-up">
+        <button class="gallery__filter-btn active" data-filter="all">Tout</button>
+        <button class="gallery__filter-btn" data-filter="spa">Espace SPA</button>
+        <button class="gallery__filter-btn" data-filter="hammam">Hammam</button>
+        <button class="gallery__filter-btn" data-filter="massage">Massage</button>
+        <button class="gallery__filter-btn" data-filter="ambiance">Ambiance</button>
+      </div>
+
+      <div class="gallery__grid" data-aos="fade-up">
+        
+        <a href="assets/images/gallery/gallery-1.jpg" class="gallery__item glightbox" data-gallery="gallery" data-category="spa">
+          <img src="assets/images/gallery/gallery-1.jpg" alt="Espace Accueil">
+          <div class="gallery__item-overlay">
+            <svg class="gallery__item-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+            <h4>Espace Accueil</h4>
+            <span>SPA</span>
+          </div>
+        </a>
+
+        <a href="assets/images/gallery/gallery-2.jpg" class="gallery__item gallery__item--tall glightbox" data-gallery="gallery" data-category="hammam">
+          <img src="assets/images/gallery/gallery-2.jpg" alt="Hammam Traditionnel">
+          <div class="gallery__item-overlay">
+            <svg class="gallery__item-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+            <h4>Hammam Traditionnel</h4>
+            <span>Hammam</span>
+          </div>
+        </a>
+
+        <a href="assets/images/gallery/gallery-3.jpg" class="gallery__item glightbox" data-gallery="gallery" data-category="massage">
+          <img src="assets/images/gallery/gallery-3.jpg" alt="Cabine de Massage">
+          <div class="gallery__item-overlay">
+            <svg class="gallery__item-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+            <h4>Cabine de Massage</h4>
+            <span>Massage</span>
+          </div>
+        </a>
+
+        <a href="assets/images/gallery/gallery-4.jpg" class="gallery__item gallery__item--wide glightbox" data-gallery="gallery" data-category="spa">
+          <img src="assets/images/gallery/gallery-4.jpg" alt="Espace Détente">
+          <div class="gallery__item-overlay">
+            <svg class="gallery__item-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+            <h4>Espace Détente</h4>
+            <span>SPA</span>
+          </div>
+        </a>
+
+        <a href="assets/images/gallery/gallery-5.jpg" class="gallery__item glightbox" data-gallery="gallery" data-category="ambiance">
+          <img src="assets/images/gallery/gallery-5.jpg" alt="Ambiance Zen">
+          <div class="gallery__item-overlay">
+            <svg class="gallery__item-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+            <h4>Ambiance Zen</h4>
+            <span>Ambiance</span>
+          </div>
+        </a>
+
+        <a href="assets/images/gallery/gallery-6.jpg" class="gallery__item glightbox" data-gallery="gallery" data-category="hammam">
+          <img src="assets/images/gallery/gallery-6.jpg" alt="Produits Naturels">
+          <div class="gallery__item-overlay">
+            <svg class="gallery__item-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+            <h4>Produits Naturels</h4>
+            <span>Hammam</span>
+          </div>
+        </a>
+
+        <a href="assets/images/gallery/gallery-7.jpg" class="gallery__item gallery__item--tall glightbox" data-gallery="gallery" data-category="ambiance">
+          <img src="assets/images/gallery/gallery-7.jpg" alt="Décoration Orientale">
+          <div class="gallery__item-overlay">
+            <svg class="gallery__item-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+            <h4>Décoration Orientale</h4>
+            <span>Ambiance</span>
+          </div>
+        </a>
+
+        <a href="assets/images/gallery/gallery-8.jpg" class="gallery__item glightbox" data-gallery="gallery" data-category="massage">
+          <img src="assets/images/gallery/gallery-8.jpg" alt="Pierres Chaudes">
+          <div class="gallery__item-overlay">
+            <svg class="gallery__item-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+            <h4>Pierres Chaudes</h4>
+            <span>Massage</span>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PRICING ==================== -->
+  <section id="pricing" class="pricing section section--alt">
+    <div class="container">
+      
+      <div class="section__header" data-aos="fade-up">
+        <span class="section__label">
+          <span class="section__label-line"></span>
+          Nos Forfaits
+        </span>
+        <h2 class="section__title">Tarifs & <span class="gold">Packs</span></h2>
+        <p class="section__desc">Des formules exclusives pour une expérience complète</p>
+      </div>
+
+      <div class="pricing__grid">
+        
+        <!-- Pack 1 -->
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pricing-card__header">
+            <div class="pricing-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <span class="pricing-card__label">Pause Détente</span>
+            <h3 class="pricing-card__title">Évasion Express</h3>
+            <p class="pricing-card__desc">Parfait pour une pause bien-être rapide</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">350</span>
+            <span class="pricing-card__currency">MAD</span>
+            <div class="pricing-card__original">
+              <span>450 MAD</span>
+              <span class="pricing-card__discount">-22%</span>
+            </div>
+            <span class="pricing-card__duration">Durée: 1h30</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Hammam traditionnel</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Gommage au savon noir</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Ghassoul naturel</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Thé à la menthe offert</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--block">Réserver</a>
+        </div>
+
+        <!-- Pack 2 - Popular -->
+        <div class="pricing-card pricing-card--popular" data-aos="fade-up" data-aos-delay="200">
+          <span class="pricing-card__badge">Le Plus Populaire</span>
+          <div class="pricing-card__header">
+            <div class="pricing-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <span class="pricing-card__label">Best-Seller</span>
+            <h3 class="pricing-card__title">Sérénité Totale</h3>
+            <p class="pricing-card__desc">Notre formule best-seller</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">650</span>
+            <span class="pricing-card__currency">MAD</span>
+            <div class="pricing-card__original">
+              <span>850 MAD</span>
+              <span class="pricing-card__discount">-24%</span>
+            </div>
+            <span class="pricing-card__duration">Durée: 3h</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Hammam Royal complet</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Massage relaxant 45min</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Soin visage hydratant</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Gommage corps complet</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Boissons et fruits offerts</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Accès espace détente</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn--primary btn--block btn--glow">Réserver</a>
+        </div>
+
+        <!-- Pack 3 -->
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="pricing-card__header">
+            <div class="pricing-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="pricing-card__label">Luxe Absolu</span>
+            <h3 class="pricing-card__title">Journée Prestige</h3>
+            <p class="pricing-card__desc">Une journée dédiée à votre bien-être</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">1200</span>
+            <span class="pricing-card__currency">MAD</span>
+            <div class="pricing-card__original">
+              <span>1600 MAD</span>
+              <span class="pricing-card__discount">-25%</span>
+            </div>
+            <span class="pricing-card__duration">Durée: 5h</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Hammam VIP privatif</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Gommage corps premium</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Massage complet 60min</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Soin visage éclat</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Manucure & Pédicure</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Déjeuner léger inclus</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--block">Réserver</a>
+        </div>
+
+      </div>
+
+      <!-- Special -->
+      <div class="pricing__special" data-aos="fade-up">
+        <div class="pricing__special-content">
+          <span class="pricing__special-icon">💍</span>
+          <div class="pricing__special-info">
+            <h3>Rituel Mariée</h3>
+            <p>Sublimez-vous pour le plus beau jour de votre vie</p>
+          </div>
+          <div class="pricing__special-price">
+            <span class="price">2000 MAD</span>
+            <span class="original">2800 MAD</span>
+          </div>
+          <a href="#contact" class="btn btn--primary">Réserver</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section id="testimonials" class="testimonials section">
+    <div class="container">
+      
+      <div class="section__header" data-aos="fade-up">
+        <span class="section__label">
+          <span class="section__label-line"></span>
+          Témoignages
+        </span>
+        <h2 class="section__title">Ce que Disent <span class="gold">Nos Clientes</span></h2>
+      </div>
+
+      <div class="testimonials__slider-wrapper" data-aos="fade-up">
+        <div class="swiper testimonials__slider">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote">"</div>
+                <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-card__text">
+                  Une expérience incroyable ! Le hammam royal est absolument divin. 
+                  Je recommande vivement !
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">F</div>
+                  <div class="testimonial-card__info">
+                    <h4>Fatima Zahra</h4>
+                    <span>Hammam Royal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote">"</div>
+                <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-card__text">
+                  Mon spa préféré à Tétouan ! L'ambiance est zen, les produits sont 
+                  naturels. J'y retourne chaque mois !
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">N</div>
+                  <div class="testimonial-card__info">
+                    <h4>Nadia Mourad</h4>
+                    <span>Massage Huile d'Argan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote">"</div>
+                <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-card__text">
+                  Rituel Mariée parfait ! Je me suis sentie une vraie princesse. 
+                  Merci à toute l'équipe !
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">K</div>
+                  <div class="testimonial-card__info">
+                    <h4>Khadija Amrani</h4>
+                    <span>Rituel Mariée</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote">"</div>
+                <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-card__text">
+                  Le soin visage éclat a transformé ma peau ! Résultat visible 
+                  immédiatement. Je recommande.
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">S</div>
+                  <div class="testimonial-card__info">
+                    <h4>Samira Benali</h4>
+                    <span>Soin Visage Éclat</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="testimonials__nav">
+          <button class="testimonials__nav-btn testimonials__nav-prev" aria-label="Précédent">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <div class="testimonials__pagination"></div>
+          <button class="testimonials__nav-btn testimonials__nav-next" aria-label="Suivant">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="cta">
+    <div class="cta__bg">
+      <img src="assets/images/cta/cta-bg.jpg" alt="CTA Background">
+    </div>
+    <div class="cta__overlay"></div>
+    <div class="container">
+      <div class="cta__content" data-aos="zoom-in">
+        <h2>Prête à Vous Faire Chouchouter ?</h2>
+        <p>Réservez dès maintenant votre moment de détente</p>
+        <div class="cta__buttons">
+          <a href="#contact" class="btn btn--primary btn--lg btn--glow">Réserver en Ligne</a>
+          <a href="https://wa.me/212661123456" target="_blank" class="btn btn--whatsapp btn--lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="contact__grid">
+        
+        <!-- Info -->
+        <div class="contact__info" data-aos="fade-right">
+          <span class="section__label">
+            <span class="section__label-line"></span>
+            Contact
+          </span>
+          <h2 class="section__title">Contactez-<span class="gold">Nous</span></h2>
+          <p class="contact__text">
+            Nous sommes à votre disposition pour toute question ou réservation.
+          </p>
+
+          <div class="contact__items">
+            <div class="contact__item">
+              <div class="contact__item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contact__item-content">
+                <h4>Adresse</h4>
+                <p>123 Avenue Mohammed V, Tétouan, Maroc</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <div class="contact__item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div class="contact__item-content">
+                <h4>Téléphone</h4>
+                <a href="tel:+212539123456">+212 539 123 456</a>
+              </div>
+            </div>
+            <div class="contact__item">
+              <div class="contact__item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact__item-content">
+                <h4>Email</h4>
+                <a href="mailto:contact@zenbeaute-tetouan.ma">contact@zenbeaute-tetouan.ma</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__hours">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              Horaires d'Ouverture
+            </h4>
+            <ul>
+              <li><span>Lundi - Vendredi</span><span>09:00 - 21:00</span></li>
+              <li><span>Samedi</span><span>10:00 - 22:00</span></li>
+              <li><span>Dimanche</span><span>10:00 - 18:00</span></li>
+            </ul>
+          </div>
+
+          <div class="contact__social">
+            <a href="#" class="contact__social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="contact__social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="contact__social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/212661123456" target="_blank" class="contact__social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact__form-wrapper" data-aos="fade-left">
+          <h3>Envoyez-nous un Message</h3>
+          <form id="contact-form" class="contact__form">
+            <div class="form__row">
+              <div class="form__group">
+                <label for="name">Nom Complet *</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+              </div>
+              <div class="form__group">
+                <label for="phone">Téléphone *</label>
+                <input type="tel" id="phone" name="phone" placeholder="06 XX XX XX XX" required>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com">
+            </div>
+            <div class="form__group">
+              <label for="service">Service Souhaité</label>
+              <select id="service" name="service">
+                <option value="">Sélectionnez un service</option>
+                <option value="hammam">Hammam</option>
+                <option value="massage">Massage</option>
+                <option value="visage">Soin Visage</option>
+                <option value="corps">Soin Corps</option>
+                <option value="pack">Pack / Forfait</option>
+                <option value="mariee">Rituel Mariée</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block btn--lg">
+              <span>Envoyer le Message</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="contact__map" data-aos="fade-up">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51752.04532058736!2d-5.4039!3d35.5889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b4251c5d9d0f1%3A0x8d0b7f3d7f0d0d0d!2sT%C3%A9touan%2C%20Morocco!5e0!3m2!1sen!2s!4v1234567890"
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          
+          <div class="footer__brand">
+            <a href="#" class="footer__logo">
+              <div class="footer__logo-icon">Z&B</div>
+              <div class="footer__logo-text">
+                <span>Zen & Beauté</span>
+                <span>Luxury SPA</span>
+              </div>
+            </a>
+            <p>Votre oasis de bien-être à Tétouan. Nous vous accueillons pour des moments de détente inoubliables.</p>
+            <div class="footer__social">
+              <a href="#" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="TikTok">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                </svg>
+              </a>
+              <a href="https://wa.me/212661123456" target="_blank" aria-label="WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+                  <div class="footer__column">
+            <h4>Liens Rapides</h4>
+            <ul>
+              <li><a href="#home">Accueil</a></li>
+              <li><a href="#about">À Propos</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#gallery">Galerie</a></li>
+              <li><a href="#pricing">Tarifs</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h4>Nos Services</h4>
+            <ul>
+              <li><a href="#services">Hammam Traditionnel</a></li>
+              <li><a href="#services">Massages</a></li>
+              <li><a href="#services">Soins du Visage</a></li>
+              <li><a href="#services">Soins du Corps</a></li>
+              <li><a href="#pricing">Forfaits & Packs</a></li>
+              <li><a href="#pricing">Rituel Mariée</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h4>Contact</h4>
+            <ul class="footer__contact">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span>123 Avenue Mohammed V, Tétouan</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <a href="tel:+212539123456">+212 539 123 456</a>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <a href="mailto:contact@zenbeaute-tetouan.ma">contact@zenbeaute-tetouan.ma</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2024 Zen & Beauté SPA. Tous droits réservés.</p>
+        <div class="footer__legal">
+          <a href="#">Mentions Légales</a>
+          <a href="#">Politique de Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BOUTONS FLOTTANTS ==================== -->
+  
+  <!-- WhatsApp -->
+  <a href="https://wa.me/212661123456" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+    </svg>
+    <span class="whatsapp-btn__text">Contactez-nous</span>
+  </a>
+
+  <!-- Scroll Top -->
+  <button class="scroll-top-btn" id="scroll-top" aria-label="Retour en haut">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

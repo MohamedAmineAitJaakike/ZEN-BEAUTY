@@ -1,0 +1,70 @@
+{
+  "spa": {
+    "name": "Zen & Beauté SPA",
+    "slogan": "Votre oasis de bien-être à Tétouan",
+    "description": "Découvrez un havre de paix au cœur de Tétouan. Notre SPA vous offre une expérience unique de détente et de beauté, inspirée des traditions marocaines ancestrales.",
+    "logo": "assets/images/logo/logo.png",
+    "logoWhite": "assets/images/logo/logo-white.png",
+    "favicon": "assets/images/logo/favicon.ico",
+    "foundedYear": 2020
+  },
+  "contact": {
+    "address": "123 Avenue Mohammed V, Tétouan, Maroc",
+    "addressAr": "123 شارع محمد الخامس، تطوان، المغرب",
+    "city": "Tétouan",
+    "country": "Maroc",
+    "postalCode": "93000",
+    "phone": "+212 539 123 456",
+    "whatsapp": "+212 661 123 456",
+    "email": "contact@zenbeaute-tetouan.ma",
+    "coordinates": {
+      "lat": 35.5889,
+      "lng": -5.3626
+    }
+  },
+  "hours": {
+    "monday": "09:00 - 21:00",
+    "tuesday": "09:00 - 21:00",
+    "wednesday": "09:00 - 21:00",
+    "thursday": "09:00 - 21:00",
+    "friday": "09:00 - 21:00",
+    "saturday": "10:00 - 22:00",
+    "sunday": "10:00 - 18:00"
+  },
+  "social": {
+    "facebook": "https://facebook.com/zenbeautetetouan",
+    "instagram": "https://instagram.com/zenbeautetetouan",
+    "tiktok": "https://tiktok.com/@zenbeautetetouan",
+    "youtube": "",
+    "whatsappLink": "https://wa.me/212661123456"
+  },
+  "theme": {
+    "primaryColor": "#D4AF37",
+    "secondaryColor": "#8B4513",
+    "accentColor": "#1a1a1a",
+    "backgroundColor": "#FFFEF9",
+    "textColor": "#333333"
+  },
+  "features": [
+    {
+      "icon": "leaf",
+      "title": "100% Naturel",
+      "description": "Produits bio et naturels du Maroc"
+    },
+    {
+      "icon": "award",
+      "title": "Thérapeutes Certifiées",
+      "description": "Équipe professionnelle et expérimentée"
+    },
+    {
+      "icon": "shield",
+      "title": "Hygiène Irréprochable",
+      "description": "Protocoles sanitaires stricts"
+    },
+    {
+      "icon": "heart",
+      "title": "Bien-être Garanti",
+      "description": "Satisfaction client 100%"
+    }
+  ]
+}

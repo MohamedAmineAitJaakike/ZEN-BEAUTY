@@ -1,0 +1,292 @@
+/* ============================================
+   SERVICES SECTION - SPA TÉTOUAN
+   ============================================ */
+
+.services {
+  background-color: var(--bg-section);
+}
+
+/* Services Categories Tabs */
+.services-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-3xl);
+  flex-wrap: wrap;
+}
+
+.services-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  background: transparent;
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--border-radius-full);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.services-tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.services-tab.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-accent);
+}
+
+.services-tab-icon {
+  font-size: var(--fs-lg);
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* Service Card */
+.service-card {
+  position: relative;
+  background: var(--bg-section);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Card Image */
+.service-card-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-card:hover .service-card-image img {
+  transform: scale(1.1);
+}
+
+.service-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.service-card:hover .service-card-overlay {
+  opacity: 1;
+}
+
+/* Card Badge */
+.service-card-badge {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  padding: var(--space-xs) var(--space-md);
+  background: var(--color-primary);
+  color: var(--color-accent);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  border-radius: var(--border-radius-full);
+  z-index: 1;
+}
+
+/* Card Content */
+.service-card-content {
+  padding: var(--space-xl);
+}
+
+.service-card-category {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.service-card-title {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-sm);
+  transition: color var(--transition-base);
+}
+
+.service-card:hover .service-card-title {
+  color: var(--color-primary);
+}
+
+.service-card-description {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Card Footer */
+.service-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.service-card-price {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+}
+
+.service-card-price span {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  color: var(--text-muted);
+}
+
+.service-card-duration {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+/* Service Card Link */
+.service-card-link {
+  position: absolute;
+  bottom: var(--space-xl);
+  right: var(--space-xl);
+  width: 45px;
+  height: 45px;
+  background: var(--color-primary);
+  color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all var(--transition-base);
+}
+
+.service-card:hover .service-card-link {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.service-card-link:hover {
+  background: var(--color-primary-dark);
+  transform: scale(1.1);
+}
+
+/* Featured Service (Large Card) */
+.service-card-featured {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.service-card-featured .service-card-image {
+  height: 100%;
+}
+
+.service-card-featured .service-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Services List (Alternative Layout) */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.service-item {
+  display: flex;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  background: var(--bg-section);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.service-item:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateX(10px);
+}
+
+.service-item-image {
+  width: 200px;
+  height: 150px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.service-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-item-content {
+  flex: 1;
+}
+
+.service-item-includes {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-md);
+}
+
+.service-item-includes span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+.service-item-includes span::before {
+  content: '✓';
+  color: var(--color-primary);
+  font-weight: var(--fw-bold);
+}

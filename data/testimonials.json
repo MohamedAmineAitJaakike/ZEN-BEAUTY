@@ -1,0 +1,69 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Fatima Zahra",
+      "initial": "F",
+      "rating": 5,
+      "comment": "Une expérience incroyable ! Le hammam royal est absolument divin. Le personnel est très professionnel et l'ambiance est parfaite pour se détendre. Je recommande vivement !",
+      "date": "2024-12-15",
+      "service": "Hammam Royal",
+      "verified": true
+    },
+    {
+      "id": 2,
+      "name": "Nadia Mourad",
+      "initial": "N",
+      "rating": 5,
+      "comment": "Mon spa préféré à Tétouan ! L'ambiance est zen, les produits sont naturels et de qualité. Le massage à l'huile d'argan était parfait. J'y retourne chaque mois !",
+      "date": "2024-12-10",
+      "service": "Massage à l'Huile d'Argan",
+      "verified": true
+    },
+    {
+      "id": 3,
+      "name": "Samira Benali",
+      "initial": "S",
+      "rating": 5,
+      "comment": "J'ai pris le forfait Journée Prestige et c'était magique ! Une vraie parenthèse de bonheur. Les soins sont excellents et le personnel adorable.",
+      "date": "2024-12-05",
+      "service": "Journée Prestige",
+      "verified": true
+    },
+    {
+      "id": 4,
+      "name": "Khadija Amrani",
+      "initial": "K",
+      "rating": 5,
+      "comment": "Rituel Mariée parfait ! Je me suis sentie une vraie princesse pour mon mariage. Merci à toute l'équipe pour cette journée inoubliable.",
+      "date": "2024-11-28",
+      "service": "Rituel Mariée",
+      "verified": true
+    },
+    {
+      "id": 5,
+      "name": "Amina Tazi",
+      "initial": "A",
+      "rating": 4,
+      "comment": "Très bon massage aux pierres chaudes. L'ambiance est relaxante et le personnel est accueillant. Je reviendrai avec plaisir.",
+      "date": "2024-11-20",
+      "service": "Massage Pierres Chaudes",
+      "verified": true
+    },
+    {
+      "id": 6,
+      "name": "Layla Bennani",
+      "initial": "L",
+      "rating": 5,
+      "comment": "Le soin visage éclat a transformé ma peau ! Les esthéticiennes sont expertes et utilisent des produits de qualité. Résultat visible immédiatement.",
+      "date": "2024-11-15",
+      "service": "Soin Visage Éclat",
+      "verified": true
+    }
+  ],
+  "stats": {
+    "averageRating": 4.9,
+    "totalReviews": 342,
+    "recommendation": 98
+  }
+}
