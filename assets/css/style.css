@@ -2898,7 +2898,10 @@ textarea:focus-visible {
 
   .hero__particles { display: none; }
 }
-
+.form__checkbox { margin-top: 8px; }
+.checkbox { display:flex; gap:10px; align-items:flex-start; cursor:pointer; }
+.checkbox input { margin-top: 3px; }
+.form__hint { display:block; margin-top:6px; color: var(--gray-600); font-size: 0.8rem; }
 /* ===========================================
    FIN DU FICHIER
    =========================================== */

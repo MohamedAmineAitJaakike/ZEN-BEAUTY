@@ -1141,48 +1141,76 @@
         </div>
 
         <!-- Form -->
-        <div class="contact__form-wrapper" data-aos="fade-left">
-          <h3>Envoyez-nous un Message</h3>
-          <form id="contact-form" class="contact__form">
-            <div class="form__row">
-              <div class="form__group">
-                <label for="name">Nom Complet *</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom" required>
-              </div>
-              <div class="form__group">
-                <label for="phone">Téléphone *</label>
-                <input type="tel" id="phone" name="phone" placeholder="06 XX XX XX XX" required>
-              </div>
-            </div>
-            <div class="form__group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="votre@email.com">
-            </div>
-            <div class="form__group">
-              <label for="service">Service Souhaité</label>
-              <select id="service" name="service">
-                <option value="">Sélectionnez un service</option>
-                <option value="hammam">Hammam</option>
-                <option value="massage">Massage</option>
-                <option value="visage">Soin Visage</option>
-                <option value="corps">Soin Corps</option>
-                <option value="pack">Pack / Forfait</option>
-                <option value="mariee">Rituel Mariée</option>
-              </select>
-            </div>
-            <div class="form__group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary btn--block btn--lg">
-              <span>Envoyer le Message</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="22" y1="2" x2="11" y2="13"/>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-              </svg>
-            </button>
-          </form>
-        </div>
+        <form id="contact-form" class="contact__form" novalidate>
+  <!-- Anti-spam (honeypot) -->
+  <input type="text" name="bot_field" autocomplete="off" tabindex="-1"
+         style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;opacity:0;">
+
+  <div class="form__row">
+    <div class="form__group">
+      <label for="name">Nom Complet *</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom" required>
+    </div>
+
+    <div class="form__group">
+      <label for="phone">Téléphone / WhatsApp *</label>
+      <input type="tel" id="phone" name="phone" placeholder="06 XX XX XX XX" required>
+    </div>
+  </div>
+
+  <div class="form__row">
+    <div class="form__group">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+    </div>
+
+    <div class="form__group">
+      <label for="service">Service Souhaité *</label>
+      <select id="service" name="service" required>
+        <option value="" selected disabled>Sélectionnez un service</option>
+        <option value="Hammam">Hammam</option>
+        <option value="Massage">Massage</option>
+        <option value="Soin Visage">Soin Visage</option>
+        <option value="Soin Corps">Soin Corps</option>
+        <option value="Pack / Forfait">Pack / Forfait</option>
+        <option value="Rituel Mariée">Rituel Mariée</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form__row">
+    <div class="form__group">
+      <label for="date">Date souhaitée</label>
+      <input type="date" id="date" name="date">
+    </div>
+
+    <div class="form__group">
+      <label for="time">Heure souhaitée</label>
+      <input type="time" id="time" name="time">
+    </div>
+  </div>
+
+  <div class="form__group">
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" placeholder="Ex: Je veux un hammam royal + massage..." required></textarea>
+  </div>
+
+  <div class="form__group form__checkbox">
+    <label class="checkbox">
+      <input type="checkbox" id="send_whatsapp" name="send_whatsapp" checked>
+      <span>Envoyer aussi au propriétaire sur WhatsApp</span>
+    </label>
+    <small class="form__hint">Après l’envoi, WhatsApp s’ouvrira avec le message prêt.</small>
+  </div>
+
+  <button type="submit" class="btn btn--primary btn--block btn--lg" id="submit-btn">
+    <span>Envoyer la Réservation</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="22" y1="2" x2="11" y2="13"></line>
+      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+    </svg>
+  </button>
+</form>
 
       </div>
 
@@ -1325,6 +1353,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>

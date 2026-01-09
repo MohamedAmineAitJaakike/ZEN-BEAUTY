@@ -630,6 +630,189 @@
     initContactForm();
     initMarquee();
   }
+  /* =========================================================
+   RESERVATION: EmailJS (owner + client) + WhatsApp
+   ========================================================= */
+
+(function () {
+  if (typeof emailjs === "undefined") return;
+
+  // 1) CONFIG EMAILJS (à remplir)
+  const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+  const EMAILJS_SERVICE_ID = "service_gokzoho";
+
+  const TEMPLATE_OWNER_ID  = "template_5ns868r";
+  const TEMPLATE_CLIENT_ID = "template_140mrke";
+
+  // 2) CONFIG PROPRIÉTAIRE
+  const OWNER_EMAIL = "aitjaakikemohamedamine@gmail.com"; // email du spa
+  const OWNER_WHATSAPP_NUMBER = "212704831881";       // sans +
+
+  emailjs.init({ publicKey: i71kBnzen70lnKZNu }); // doc EmailJS init: https://www.emailjs.com/docs/sdk/installation/
+
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const submitBtn = document.getElementById("submit-btn");
+
+  function safe(v) {
+    return (v ?? "").toString().trim();
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function buildWhatsAppText(d) {
+    const lines = [
+      "السلام عليكم",
+      "Nouvelle réservation - Zen & Beauté SPA",
+      "— — — — —",
+      `Nom: ${d.name}`,
+      `Téléphone: ${d.phone}`,
+      `Email: ${d.email}`,
+      `Service: ${d.service}`,
+      `Date: ${d.date || "-"}`,
+      `Heure: ${d.time || "-"}`,
+      "— — — — —",
+      `Message: ${d.message}`,
+      "",
+      "Merci.",
+    ];
+    return lines.join("\n");
+  }
+
+  function showMessage(type, text, waUrl) {
+    const old = form.querySelector(".form-message");
+    if (old) old.remove();
+
+    const box = document.createElement("div");
+    box.className = `form-message form-message--${type}`;
+    box.textContent = text;
+
+    if (waUrl) {
+      const a = document.createElement("a");
+      a.href = waUrl;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.className = "btn btn--whatsapp btn--lg";
+      a.style.marginTop = "12px";
+      a.innerHTML = "<span>Ouvrir WhatsApp</span>";
+      box.appendChild(document.createElement("br"));
+      box.appendChild(a);
+    }
+
+    form.insertBefore(box, form.firstChild);
+
+    setTimeout(() => {
+      box.style.opacity = "0";
+      setTimeout(() => box.remove(), 300);
+    }, 8000);
+  }
+
+  function lockButton(locked) {
+    if (!submitBtn) return;
+    submitBtn.disabled = locked;
+    submitBtn.style.opacity = locked ? "0.85" : "1";
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Honeypot anti-spam
+    const bot = safe(form.querySelector('input[name="bot_field"]')?.value);
+    if (bot) return; // spam -> on ignore
+
+    const data = {
+      name: safe(form.name?.value),
+      phone: safe(form.phone?.value),
+      email: safe(form.email?.value),
+      service: safe(form.service?.value),
+      date: safe(form.date?.value),
+      time: safe(form.time?.value),
+      message: safe(form.message?.value),
+      send_whatsapp: !!form.send_whatsapp?.checked,
+    };
+
+    // Validation
+    if (!data.name || !data.phone || !data.email || !data.service || !data.message) {
+      showMessage("error", "Veuillez remplir tous les champs obligatoires.");
+      return;
+    }
+    if (!isValidEmail(data.email)) {
+      showMessage("error", "Veuillez entrer un email valide.");
+      return;
+    }
+
+    // WhatsApp: on prépare l'URL (Click-to-chat)
+    const waText = buildWhatsAppText(data);
+    const waUrl = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
+
+    // Astuce anti pop-up blocker: on ouvre l’onglet WhatsApp tout de suite si coché,
+    // puis on le redirige après succès.
+    let waWin = null;
+    if (data.send_whatsapp) {
+      waWin = window.open("about:blank", "_blank");
+    }
+
+    lockButton(true);
+
+    // Paramètres envoyés à EmailJS (templates)
+    const params = {
+      // vers propriétaire
+      to_email: OWNER_EMAIL,
+      spa_name: "Zen & Beauté SPA",
+      spa_city: "Tétouan",
+
+      // client
+      client_name: data.name,
+      client_email: data.email,
+
+      // détails réservation
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      service: data.service,
+      date: data.date || "-",
+      time: data.time || "-",
+      message: data.message,
+
+      // WhatsApp (optionnel)
+      owner_whatsapp: `+${OWNER_WHATSAPP_NUMBER}`,
+      whatsapp_link: waUrl,
+    };
+
+    try {
+      // 1) Email propriétaire
+      await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_OWNER_ID, params); // doc: https://www.emailjs.com/docs/sdk/send/
+
+      // 2) Email client (thank you)
+      await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_CLIENT_ID, params);
+
+      form.reset();
+
+      if (waWin && data.send_whatsapp) {
+        waWin.location.href = waUrl;
+      }
+
+      showMessage(
+        "success",
+        "✅ Réservation envoyée. Un email de confirmation vous a été envoyé.",
+        data.send_whatsapp ? waUrl : null
+      );
+    } catch (err) {
+      if (waWin) waWin.close();
+      showMessage(
+        "error",
+        "❌ Envoi email échoué. Vous pouvez envoyer la réservation via WhatsApp :",
+        waUrl
+      );
+      // console.error(err);
+    } finally {
+      lockButton(false);
+    }
+  });
+})();
 
   document.addEventListener('DOMContentLoaded', init);
 })();
