@@ -630,41 +630,53 @@
     initContactForm();
     initMarquee();
   }
-  /* =========================================================
+  
+
+  document.addEventListener('DOMContentLoaded', init);
+})();
+
+/* =========================================================
    RESERVATION: EmailJS (owner + client) + WhatsApp
    ========================================================= */
-
 (function () {
-  if (typeof emailjs === "undefined") return;
+  // Vérifie que EmailJS est bien chargé
+  if (typeof emailjs === "undefined") {
+    console.warn("EmailJS SDK non chargé. Vérifie le script CDN EmailJS dans le HTML.");
+    return;
+  }
 
-  // 1) CONFIG EMAILJS (à remplir)
-  const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+  // 1) CONFIG EMAILJS (IMPORTANT: tout en STRING)
+  const EMAILJS_PUBLIC_KEY = "i71kBnzen70lnKZNu";   // <-- entre guillemets
   const EMAILJS_SERVICE_ID = "service_gokzoho";
 
   const TEMPLATE_OWNER_ID  = "template_5ns868r";
   const TEMPLATE_CLIENT_ID = "template_140mrke";
 
-  // 2) CONFIG PROPRIÉTAIRE
-  const OWNER_EMAIL = "aitjaakikemohamedamine@gmail.com"; // email du spa
-  const OWNER_WHATSAPP_NUMBER = "212704831881";       // sans +
+  // 2) PROPRIETAIRE
+  const OWNER_EMAIL = "aitjaakikemohamedamine@gmail.com";
+  const OWNER_WHATSAPP_NUMBER = "212704831881"; // sans +
 
-  emailjs.init({ publicKey: i71kBnzen70lnKZNu }); // doc EmailJS init: https://www.emailjs.com/docs/sdk/installation/
+  // Init EmailJS
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
   const form = document.getElementById("contact-form");
   if (!form) return;
 
-  const submitBtn = document.getElementById("submit-btn");
+  // Si tu n’as pas d’id="submit-btn", on prend le bouton submit du form
+  const submitBtn = document.getElementById("submit-btn") || form.querySelector('button[type="submit"]');
 
-  function safe(v) {
-    return (v ?? "").toString().trim();
-  }
+  const safe = (v) => (v ?? "").toString().trim();
+  const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
+  // remove() fallback (au cas où)
+  const safeRemove = (el) => {
+    if (!el) return;
+    if (typeof el.remove === "function") el.remove();
+    else if (el.parentNode) el.parentNode.removeChild(el);
+  };
 
   function buildWhatsAppText(d) {
-    const lines = [
+    return [
       "السلام عليكم",
       "Nouvelle réservation - Zen & Beauté SPA",
       "— — — — —",
@@ -678,13 +690,12 @@
       `Message: ${d.message}`,
       "",
       "Merci.",
-    ];
-    return lines.join("\n");
+    ].join("\n");
   }
 
   function showMessage(type, text, waUrl) {
     const old = form.querySelector(".form-message");
-    if (old) old.remove();
+    safeRemove(old);
 
     const box = document.createElement("div");
     box.className = `form-message form-message--${type}`;
@@ -706,7 +717,7 @@
 
     setTimeout(() => {
       box.style.opacity = "0";
-      setTimeout(() => box.remove(), 300);
+      setTimeout(() => safeRemove(box), 300);
     }, 8000);
   }
 
@@ -719,19 +730,20 @@
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Honeypot anti-spam
+    // Honeypot anti-spam (si tu as bien ce champ dans le form)
     const bot = safe(form.querySelector('input[name="bot_field"]')?.value);
-    if (bot) return; // spam -> on ignore
+    if (bot) return;
 
+    // Récupération des champs (compatibles avec ton form)
     const data = {
-      name: safe(form.name?.value),
-      phone: safe(form.phone?.value),
-      email: safe(form.email?.value),
-      service: safe(form.service?.value),
-      date: safe(form.date?.value),
-      time: safe(form.time?.value),
-      message: safe(form.message?.value),
-      send_whatsapp: !!form.send_whatsapp?.checked,
+      name: safe(form.querySelector('[name="name"]')?.value),
+      phone: safe(form.querySelector('[name="phone"]')?.value),
+      email: safe(form.querySelector('[name="email"]')?.value),
+      service: safe(form.querySelector('[name="service"]')?.value),
+      date: safe(form.querySelector('[name="date"]')?.value),
+      time: safe(form.querySelector('[name="time"]')?.value),
+      message: safe(form.querySelector('[name="message"]')?.value),
+      send_whatsapp: !!form.querySelector('[name="send_whatsapp"]')?.checked,
     };
 
     // Validation
@@ -744,12 +756,11 @@
       return;
     }
 
-    // WhatsApp: on prépare l'URL (Click-to-chat)
+    // WhatsApp URL
     const waText = buildWhatsAppText(data);
     const waUrl = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
 
-    // Astuce anti pop-up blocker: on ouvre l’onglet WhatsApp tout de suite si coché,
-    // puis on le redirige après succès.
+    // Pop-up blocker trick
     let waWin = null;
     if (data.send_whatsapp) {
       waWin = window.open("about:blank", "_blank");
@@ -757,18 +768,16 @@
 
     lockButton(true);
 
-    // Paramètres envoyés à EmailJS (templates)
+    // Variables envoyées au template EmailJS
     const params = {
-      // vers propriétaire
+      // pour le propriétaire
       to_email: OWNER_EMAIL,
-      spa_name: "Zen & Beauté SPA",
-      spa_city: "Tétouan",
 
-      // client
+      // pour le client
       client_name: data.name,
       client_email: data.email,
 
-      // détails réservation
+      // infos
       name: data.name,
       phone: data.phone,
       email: data.email,
@@ -777,16 +786,16 @@
       time: data.time || "-",
       message: data.message,
 
-      // WhatsApp (optionnel)
-      owner_whatsapp: `+${OWNER_WHATSAPP_NUMBER}`,
+      // lien whatsapp
       whatsapp_link: waUrl,
+      owner_whatsapp: `+${OWNER_WHATSAPP_NUMBER}`,
     };
 
     try {
       // 1) Email propriétaire
-      await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_OWNER_ID, params); // doc: https://www.emailjs.com/docs/sdk/send/
+      await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_OWNER_ID, params);
 
-      // 2) Email client (thank you)
+      // 2) Email client
       await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_CLIENT_ID, params);
 
       form.reset();
@@ -797,7 +806,7 @@
 
       showMessage(
         "success",
-        "✅ Réservation envoyée. Un email de confirmation vous a été envoyé.",
+        "✅ Réservation envoyée. Un email de confirmation a été envoyé au client.",
         data.send_whatsapp ? waUrl : null
       );
     } catch (err) {
@@ -807,12 +816,9 @@
         "❌ Envoi email échoué. Vous pouvez envoyer la réservation via WhatsApp :",
         waUrl
       );
-      // console.error(err);
+      console.error("EmailJS error:", err);
     } finally {
       lockButton(false);
     }
   });
-})();
-
-  document.addEventListener('DOMContentLoaded', init);
 })();
